@@ -18,6 +18,12 @@ public class Email {
         this.firstname = firstname;
         this.lastname = lastname;
         System.out.println("New Employee: " + this.firstname + " " + this.lastname);
+
+        // calling method
+        this.department = this.setDepartment();
+        this.password = this.generate_password(8);
+        this.email = this.generate_email();
+
     }
 
     private String generate_email() {
@@ -86,6 +92,32 @@ public class Email {
                 System.out.println("Enter a valid choice ");
             }
         }while (!flag);
+    }
+
+    // Setting the mailbox capacity method
+    public void set_mailCap(){
+        System.out.println("Current capacity= "+this.mailCapacity+"mb");
+        System.out.println("Enter new mailbox capacity: ");
+        this.mailCapacity = s.nextInt();
+        System.out.println("Mailbox capacity is successfully changed");
+    }
+
+    // set alternate mail
+
+    public void alternate_email(){
+        System.out.println("Enter new alternate mail: ");
+        this.alter_email = s.next();
+        System.out.println("Alternate email is set");
+    }
+
+    // Display user information method
+    public void getInfo(){
+        System.out.println("New:"+this.firstname+" "+this.lastname);
+        System.out.println("Department: "+this.department);
+        System.out.println("Email:"+this.email);
+        System.out.println("Password:"+this.password);
+        System.out.println("Mailbox capacity"+this.mailCapacity+"mb");
+        System.out.println("Alternate mail"+this.alter_email);
     }
 
 }
