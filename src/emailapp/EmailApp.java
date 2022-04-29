@@ -16,7 +16,7 @@ public class EmailApp {
 
         Email email = new Email(f_name, l_name);
         do {
-            System.out.println("\n****\nEnter your choice\n1.Show Info\n2.Change password\n3.Change mailbox capacity\n4.Set Alternate mail\n5.Exit");
+            System.out.println("\n****\nEnter your choice\n1.Show Info\n2.Change password\n3.Change mailbox capacity\n4.Set Alternate mail\n5.Store Data in file\n6.Display from file\n7.Exit");
             choice = scanner.nextInt();
             switch (choice){
                 case 1:
@@ -32,7 +32,12 @@ public class EmailApp {
                     email.alternate_email();
                     break;
                 case 5:
-                    System.out.println("Thank you for using the program!");
+                    email.storefile();
+                    break;
+                case 6:
+                    email.read_file();
+                case 7:
+                    System.out.println("Thanks for trying our program");
                     break;
                 default:
                     System.out.println("Invalid choice!!!  \nEnter proper choice again..");

@@ -148,6 +148,8 @@ public class Email {
             while ((i=fileReader.read())!=-1){
                 System.out.println((char)i);
             }
+            System.out.println("");
+            fileReader.close();
 
         }catch(Exception e){
             System.out.println(e);
