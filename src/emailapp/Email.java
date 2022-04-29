@@ -120,4 +120,37 @@ public class Email {
         System.out.println("Alternate mail"+this.alter_email);
     }
 
+    public void storefile() {
+        try {
+            FileWriter in = new FileWriter("C:\\Users\\Plass\\Desktop\\info.txt");
+            in.write("First name: "+this.firstname);
+            in.append("\nLast name: "+this.lastname);
+            in.append("\nEmail: "+this.email);
+            in.append("\nPassword: "+this.password);
+            in.append("\nCapacity "+this.mailCapacity);
+            in.append("\nAlternate mail "+this.alter_email);
+            in.close();
+            System.out.println("Data Stored");
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
+    }
+
+    // Reading file method
+    public void read_file(){
+        try {
+
+            FileReader fileReader = new FileReader("C:\\Users\\Plass\\Desktop\\info.txt");
+            int i;
+
+            while ((i=fileReader.read())!=-1){
+                System.out.println((char)i);
+            }
+
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
 }
