@@ -7,7 +7,7 @@ public class EmailApp {
         Scanner scanner = new Scanner(System.in);
 
         // User info
-        System.out.println("Enter First Email");
+        System.out.println("Enter First Name");
         String f_name = scanner.next();
 
         System.out.println("Enter last name: ");
@@ -43,6 +43,6 @@ public class EmailApp {
                     System.out.println("Invalid choice!!!  \nEnter proper choice again..");
 
             }
-        }while (choice!=5);
+        }while (choice!=7);
     }
 }
